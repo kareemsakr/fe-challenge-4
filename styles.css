@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* Primary */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --very-dark-cyan: hsl(158, 41%, 25%);
+  --cream: hsl(30, 38%, 92%);
+
+  /* Neutral */
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
+  --xxs: 0.25rem;
+  --xs: 0.5rem;
+  --s: 0.75rem;
+  --m: 1rem;
+  --l: 1.25rem;
+  --xl: 1.75rem;
+  --xxl: 2.5rem;
+  --xxxl: 3.5rem;
+  font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: var(--cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: var(--m);
+  margin: var(--xl) var(--m);
+}
+
+.card header img {
+  width: 100%;
+  border-top-left-radius: var(--m);
+  border-top-right-radius: var(--m);
+}
+
+.card section > div {
+  padding: var(--xl);
+  display: flex;
+  flex-direction: column;
+}
+
+.card .category {
+  letter-spacing: var(--xxs);
+  text-transform: uppercase;
+  color: var(--dark-grayish-blue);
+  font-size: var(--s);
+  margin-bottom: var(--s);
+}
+
+.card h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-bottom: var(--m);
+}
+
+.card .description {
+  font-size: 0.85rem;
+  line-height: 1.5rem;
+  color: var(--dark-grayish-blue);
+  margin-bottom: var(--l);
+}
+
+.card .price {
+  color: var(--dark-cyan);
+  font-size: var(--l);
+  margin-bottom: var(--m);
+  display: flex;
+  align-items: center;
+}
+
+.card .price strong {
+  font-size: var(--xxl);
+  margin-right: var(--l);
+  font-family: "Fraunces", serif;
+}
+
+.card .price s {
+  font-size: var(--s);
+  color: var(--dark-grayish-blue);
+}
+
+.card button {
+  width: 100%;
+  background-color: var(--dark-cyan);
+  border: none;
+  padding: var(--m) var(--xxl);
+  border-radius: var(--s);
+  font-weight: 700;
+  color: var(--white);
+  font-size: var(--l);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card button > img {
+  margin-right: var(--s);
+  width: var(--l); /* Adjust icon size */
+  height: var(--l); /* Adjust icon size */
+}
+
+.card button:hover {
+  background-color: var(--very-dark-cyan);
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 16.05px;
+  }
+  .card {
+    flex-direction: row;
+  }
+
+  .card > * {
+    flex: 1;
+  }
+
+  .card header img {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--m);
+  }
+
+  .card section > div {
+    padding: 2rem;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .card .price strong {
+    font-size: 2rem;
+  }
+  .card button {
+    font-size: var(--m);
+  }
+}
